@@ -1,0 +1,11 @@
+services:
+  dokubee-privacy:
+    image: nginx:alpine
+    container_name: dokubee-privacy
+    restart: unless-stopped
+
+    ports:
+      - "7020:80"
+
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
